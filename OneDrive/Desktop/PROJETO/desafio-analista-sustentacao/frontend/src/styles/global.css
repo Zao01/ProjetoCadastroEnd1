@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+    /* Cores Principais */
+    --purple: #7C3AED;
+    --purple-soft: #EDE4FD;
+    --coral: #FF5533;
+    --coral-soft: #FFEFE9;
+
+    /* Neutralidade & Texto */
+    --ink: #181521;
+    --ink-soft: #7A7686;
+    --bg-main: #F6F5FA;
+    --white: #FFFFFF;
+    --dark-sidebar: #121018;
+
+    /* Status */
+    --green: #1DBF73;
+    --green-soft: #E3FAEE;
+    --amber: #FFAA00;
+    --amber-soft: #FFF4DD;
+    --red: #FF3B30;
+    --red-soft: #FFE9E7;
+
+    /* Bordas e Sombras */
+    --r-lg: 22px;
+    --r-md: 16px;
+    --r-full: 999px;
+    --shadow: 0 6px 20px rgba(24, 21, 33, 0.06);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--ink);
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--ink);
+}
+
+/* Layout Padrão em Card/Painel */
+.card-container {
+    background: var(--white);
+    border-radius: var(--r-lg);
+    padding: 26px;
+    box-shadow: var(--shadow);
+    width: 100%;
+    max-width: 900px;
+    margin: 30px auto;
+}
+
+/* Formulários Modernos em Grid */
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.form-grid .full-width {
+    grid-column: span 2;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--ink-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 1px solid #EAE7F0;
+    background: #FBFAFD;
+    color: var(--ink);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: var(--purple);
+    background: var(--white);
+    box-shadow: 0 0 0 3px var(--purple-soft);
+}
+
+input:disabled {
+    background: #F2F0F6;
+    color: var(--ink-soft);
+    cursor: not-allowed;
+}
+
+/* Botões */
+button {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: var(--r-full);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+button.btn-primary {
+    background: var(--purple);
+    color: var(--white);
+}
+
+button.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+button.btn-success {
+    background: var(--green);
+    color: var(--white);
+}
+
+button.btn-danger {
+    background: transparent;
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+button.btn-danger:hover {
+    background: var(--red);
+    color: var(--white);
+}
+
+@media (max-width: 650px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-grid .full-width {
+        grid-column: span 1;
+    }
+}
