@@ -1,0 +1,11 @@
+@import './styles/global.css';
+@import './styles/perfil.css';
+@import './styles/admin.css';
+
+:root {
+  color-scheme: light !important;
+}
+
+body {
+  background-color: #F6F5FA !important;
+}

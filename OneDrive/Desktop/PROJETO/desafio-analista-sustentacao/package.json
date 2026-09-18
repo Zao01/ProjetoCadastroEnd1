@@ -1,0 +1,15 @@
+{
+    "name": "projeto-cadastro-enderecos",
+    "version": "1.0.0",
+    "description": "Script principal para inicialização full-stack",
+    "scripts": {
+        "install:all": "npm install --prefix frontend",
+        "dev:backend": "cd backend && ./mvnw spring-boot:run",
+        "dev:backend:win": "cd backend && mvnw spring-boot:run",
+        "dev:frontend": "npm run dev --prefix frontend",
+        "start": "concurrently -k -p \"[{name}]\" -n \"BACKEND,FRONTEND\" -c \"magenta.bold,cyan.bold\" \"npm run dev:backend:win\" \"npm run dev:frontend\""
+    },
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
